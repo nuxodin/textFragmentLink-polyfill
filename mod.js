@@ -1,9 +1,6 @@
 
 
 function run(){
-    if ('fragmentDirective' in document) return;
-    document.fragmentDirective = {};
-
     const hash = location.hash;
     if (!hash.startsWith('#:~:text=')) return;
     const parts = hash.substr(9).split(',');
@@ -28,5 +25,9 @@ function run(){
     //document.addEventListener('scroll',remove);
 }
 
-addEventListener('DOMContentLoaded', run);
-addEventListener('hashchange', run);
+if ('fragmentDirective' in document) {
+    document.fragmentDirective = {};
+    addEventListener('DOMContentLoaded', run);
+    addEventListener('hashchange', run);
+}
+
