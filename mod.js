@@ -9,7 +9,6 @@ function run(){
         if (part.startsWith('-')) return console.log('prefix not supported');
         if (part.endsWith('-')) return console.log('suffix not supported');
     }
-    console.log('run');
     window.find(parts[0]);
     const selection = getSelection();
     const range = selection.getRangeAt(0);
@@ -26,7 +25,7 @@ function run(){
     //document.addEventListener('scroll',remove);
 }
 
-if (!('fragmentDirective' in document)) {
+if (!document.fragmentDirective) {
     document.fragmentDirective = {};
     addEventListener('DOMContentLoaded', run);
     addEventListener('hashchange', run);
