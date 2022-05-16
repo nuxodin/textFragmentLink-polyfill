@@ -10,6 +10,7 @@ function run(){
         if (part.endsWith('-')) return console.log('suffix not supported');
     }
     window.find(parts[0]);
+    /*
     const selection = getSelection();
     const range = selection.getRangeAt(0);
     if (!range) return;
@@ -23,6 +24,7 @@ function run(){
     }
     addEventListener('mousedown',remove);
     //document.addEventListener('scroll',remove);
+    */
 }
 
 if (!document.fragmentDirective) {
