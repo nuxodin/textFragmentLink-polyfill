@@ -4,7 +4,7 @@ function run(){
     const hash = location.hash;
     if (!hash.startsWith('#:~:text=')) return;
 console.log('run');
-    const parts = hash.substr(9).split(',');
+    const parts = hash.substring(9).split(',');
     if (parts.length > 1) return console.log('multiple parts not supported');
     for (let part of parts) {
         if (part.startsWith('-')) return console.log('prefix not supported');
