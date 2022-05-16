@@ -3,6 +3,7 @@
 function run(){
     const hash = location.hash;
     if (!hash.startsWith('#:~:text=')) return;
+console.log('run');
     const parts = hash.substr(9).split(',');
     if (parts.length > 1) return console.log('multiple parts not supported');
     for (let part of parts) {
@@ -25,9 +26,8 @@ function run(){
     //document.addEventListener('scroll',remove);
 }
 
-if ('fragmentDirective' in document) {
+if (!('fragmentDirective' in document)) {
     document.fragmentDirective = {};
     addEventListener('DOMContentLoaded', run);
     addEventListener('hashchange', run);
 }
-
