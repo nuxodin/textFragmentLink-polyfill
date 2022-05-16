@@ -1,7 +1,8 @@
 
 
 function run(){
-    if ('fragmentDirective' in Location.prototype) return;
+    if ('fragmentDirective' in document) return;
+    document.fragmentDirective = {};
 
     const hash = location.hash;
     if (!hash.startsWith('#:~:text=')) return;
@@ -28,3 +29,4 @@ function run(){
 }
 
 addEventListener('DOMContentLoaded', run);
+addEventListener('hashchange', run);
