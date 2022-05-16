@@ -9,7 +9,7 @@ function run(){
         if (part.startsWith('-')) return console.log('prefix not supported');
         if (part.endsWith('-')) return console.log('suffix not supported');
     }
-    window.find(parts[0]);
+    window.find(parts[0], true) || window.find(parts[0], true, true);
     /*
     const selection = getSelection();
     const range = selection.getRangeAt(0);
