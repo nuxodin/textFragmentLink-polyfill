@@ -5,7 +5,7 @@ function run(){
     if (!hash.startsWith('#:~:text=')) return;
     const parts = hash.substring(9).split(',');
     if (parts.length > 1) return console.log('multiple parts not supported');
-    for (let part of parts) {
+    for (const part of parts) {
         if (part.startsWith('-')) return console.log('prefix not supported');
         if (part.endsWith('-')) return console.log('suffix not supported');
     }

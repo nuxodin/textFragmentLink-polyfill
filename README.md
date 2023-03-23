@@ -1,4 +1,3 @@
 # textFragmentLink-polyfill
 
-
-very small but primitive polyfill for text-fragment-links `#:~:text=`
+Very small but primitive polyfill for text-fragment-links `#:~:text=`
